@@ -1,0 +1,2 @@
+class SplitwiseError(Exception):
+    pass
