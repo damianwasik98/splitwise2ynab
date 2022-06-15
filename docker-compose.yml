@@ -1,0 +1,12 @@
+version: "3.9"
+
+services:
+  splitwise2ynab:
+    build: .
+    image: "splitwise2ynab:dev"
+    container_name: "splitwise2ynab"
+    command: run
+    env_file:
+      - ".env"
+    volumes:
+      - .:/code
