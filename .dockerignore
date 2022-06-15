@@ -1,0 +1,6 @@
+.env
+.python-version
+Procfile
+build
+.vscode
+__pycache__
