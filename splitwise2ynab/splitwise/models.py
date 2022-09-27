@@ -10,13 +10,13 @@ from splitwise2ynab.splitwise.exceptions import SplitwiseError
 class SplitwiseExpenseParticipant(BaseModel):
     participant_id: int
     first_name: str
-    last_name: str
+    last_name: Optional[str]
     paid: Decimal
     owed: Decimal
 
     @property
     def fullname(self):
-        return f"{self.first_name} {self.last_name}"
+        return f"{self.first_name} {self.last_name or ''}".strip()
 
 
 class SplitwiseExpense(BaseModel):
